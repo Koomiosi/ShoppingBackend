@@ -22,12 +22,12 @@ public partial class ShopListDbContext : DbContext
             
             //Paikallinen tietokanta
         //=> optionsBuilder.UseSqlServer("Data Source=Tony\\SQLEXPRESS; Database=ShopListDB;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
-            
-            //Azure tietokanta
-        => optionsBuilder.UseSqlServer("Server=tcp:shoppingapp.database.windows.net,1433;Initial Catalog=ShopListDB;Persist Security Info=False;User ID=TonyK;Password=Spiderman989;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30");
 
-    
-    
+    //Azure tietokanta
+    => optionsBuilder.UseSqlServer("Server=tcp:tonysqlserver2.database.windows.net,1433;Initial Catalog=ShopListDB;Persist Security Info=False;User ID=admintony;Password=Spiderman989;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+
+
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Shoplist>(entity =>
